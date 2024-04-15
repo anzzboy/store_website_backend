@@ -24,9 +24,7 @@ router.get("/:id", async (req, res) => {
 // Create new list
 router.post("/", async (req, res) => {
   try {
-    let newDocument = {
-      list: req.body.list,
-    };
+    let newDocument = req.body;
     let collection = await db.collection("lists");
     let result = await collection.insertOne(newDocument);
     res.send(result).status(204);
