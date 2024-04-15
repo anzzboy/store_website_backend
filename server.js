@@ -12,6 +12,6 @@ app.use(cors());
 app.use(express.json());
 app.use("/lists", lists);
 
-app.listen((PORT) => {
-  console.log("Up on " + PORT);
+app.listen(PORT, () => {
+  console.log(`Server up, on: ${PORT}`);
 });
